@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/website_icon_0.png">
+    <title>James Chychota Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <img class="header__logo" src="img/website_icon_0.png" alt="Amdocs Logo">
+      <h1 class="header__title">James Chychota</h1>
+      <h2 class="header__subtitle">Front-end ninja</h2>
+      <!--Menu Hamburger-->
+      <a id="menu" class="header__menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+        </svg>
+      </a>
+      <hr>
+      <!--Color Box Sidebar-->
+      <div id="drawer" class="colors colors__item">
+        <div class="colors__item">
+          <div class="box1"></div>
+          <p>#f87c3a</p>
+          <div class="box2"></div>
+          <p>#523d31</p>
+          <div class="box3"></div>
+          <p>#fba678</p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!--Main content and feature work-->
+      <section class="content">
+        <img class="main__image" src="img/Amdocs-large.jpg" alt="Amdocs Building, James Chychota">
+        <h2 class="feature">Feature Work</h2>
+        <div class="container">
+          <article class="feature__box feature__box1">
+            <img class="feature__image" src="img/beauty-bloom-blue-67636.jpg" alt="Beauty Bloom, www.pexels.com">
+            <h2 class="feature__title">Beauty</h2>
+            <p>https://github.com/udacity/beauty/</p>
+          </article>
+          <article class="feature__box feature__box2">
+            <img class="feature__image" src="img/bloom-blossom-close-up-53501.jpg" alt="Bloom Blossom, www.pexels.com">
+            <h2 class="feature__title">Blossom</h2>
+            <p>https://github.com/udacity/blossom/</p>
+          </article>
+          <article class="feature__box feature__box3">
+            <img class="feature__image" src="img/flora-floral-flower-36455.jpg" alt="Flora Flower, www.pexels.com">
+            <h2 class="feature__title">Flora</h2>
+            <p>https://github.com/udacity/flora/</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script>
+      /*
+       * Open the drawer when the menu icon is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('.colors');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+    </script>
+  </body>
+</html>

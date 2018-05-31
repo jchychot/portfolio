@@ -1,0 +1,129 @@
+.header__menu {
+  display: none;
+}
+
+#drawer {
+  display: none;
+}
+
+/*
+ *
+ * Screen smaller then 600px
+ *
+ */
+@media screen and (max-width: 600px) {
+  .header__logo {
+    height: 50px;
+    margin-top: 6px;
+  }
+  .header__title {
+    font-size: 2.5em;
+  }
+  .header__subtitle {
+    font-size: 1.5em;
+    padding-bottom: 6px;
+  }
+  .colors {
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-77px, 0);
+    transform: translate(-77px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+  .colors.open {
+    -webkit-transform: translate(-12px, 0);
+    transform: translate(-12px, 0);
+  }
+  .colors__item {
+    display: list-item;
+    text-align: center;
+    margin-left: 5px;
+  }
+  .header__menu {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    padding: 1em;
+  }
+  .header__menu svg {
+    width: 32px;
+    fill: #E0E0E0;
+  }
+  #drawer {
+   display: block;
+   }
+}
+
+/*
+ *
+ * Screen larger then 601px
+ *
+ */
+@media screen and (min-width: 601px) {
+  /* Displays the color boxes */
+  #drawer {
+  display: block;
+  width: 66px;
+  }
+
+  /* Added margins to accommodate color boxes*/
+  .header {
+  margin-left: 71px;
+  }
+
+  .content {
+  margin-left: 71px;
+  }
+  .content {
+    position: relative;
+    top: -248px
+  }
+  .colors {
+    position: relative;
+    left: -70px;
+  }
+}
+
+/*
+ *
+ * Screen larger then 800px
+ *
+ */
+@media screen and (min-width: 800px) {
+    /* Column Drop responsive Pattern*/
+    .feature__box {
+     width: 33.333333%;
+    }
+    .feature__box1 {
+    padding-right: 1em;
+    }
+    .feature__box2 {
+    padding-left: 1em;
+    padding-right: 1em;
+    }
+    .feature__box3 {
+    padding-left: 1em}
+}
+
+/*
+ *
+ * Screen larger then 1200px
+ *
+ */
+@media screen and (min-width: 1200px) {
+    /* Add Margins */
+    .header {
+      width: 1200px;
+      padding-left: 71px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  .content {
+    width: 1200px;
+    padding-left: 71px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
